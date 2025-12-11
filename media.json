@@ -103,5 +103,12 @@
         "date": "10-11-1962",
         "category": "Magazine",
         "id": "0fa25d0d-a7e2-4baa-b11d-1ca6932a5191"
+    },
+    "0b06f5b7-955b-4a0e-b7dc-b5204ff71b83": {
+        "name": "test media",
+        "author": "test media",
+        "date": "test media",
+        "category": "test media",
+        "id": "0b06f5b7-955b-4a0e-b7dc-b5204ff71b83"
     }
 }
