@@ -1,0 +1,107 @@
+{
+    "9c09d671-ae2c-423b-bef2-2fd8a163c58f": {
+        "name": "Atomic Habits",
+        "author": "James Clear",
+        "date": "16-10-2018",
+        "category": "Book",
+        "id": "9c09d671-ae2c-423b-bef2-2fd8a163c58f"
+    },
+    "567a89e4-d376-4101-b69e-39bed283fde9": {
+        "name": "The Four Agreements",
+        "author": "Don Miguel Ruiz",
+        "date": "07-11-1997",
+        "category": "Book",
+        "id": "567a89e4-d376-4101-b69e-39bed283fde9"
+    },
+    "46018d15-cdbb-4f5e-95be-9f1363a17161": {
+        "name": "Can't Hurt Me",
+        "author": "David Goggins",
+        "date": "04-12-2018",
+        "category": "Book",
+        "id": "46018d15-cdbb-4f5e-95be-9f1363a17161"
+    },
+    "d20f37eb-c4be-4b55-90ad-da79e10164bf": {
+        "name": "The Pursuit of Happyness",
+        "author": "Chris Gardner",
+        "date": "03-05-2006",
+        "category": "Movie",
+        "id": "d20f37eb-c4be-4b55-90ad-da79e10164bf"
+    },
+    "1c3fcbb4-f88b-4122-b53a-cadc34b1ae4c": {
+        "name": "Mucize",
+        "author": "Mahsun K\u0131rm\u0131z\u0131g\u00fcl",
+        "date": "01-01-2015",
+        "category": "Movie",
+        "id": "1c3fcbb4-f88b-4122-b53a-cadc34b1ae4c"
+    },
+    "ff812740-a55c-445c-b03c-bbeccf6754e5": {
+        "name": "Ford v Ferrari",
+        "author": "Jez Butterworth",
+        "date": "15-11-2019",
+        "category": "Movie",
+        "id": "ff812740-a55c-445c-b03c-bbeccf6754e5"
+    },
+    "b9099f05-532c-427a-9bec-41acacf44497": {
+        "name": "Real Steel",
+        "author": "John Gatins",
+        "date": "07-10-2011",
+        "category": "Movie",
+        "id": "b9099f05-532c-427a-9bec-41acacf44497"
+    },
+    "502ceb34-4b92-4a29-873b-e93e7c630baf": {
+        "name": "The Karate Kid",
+        "author": "Harald Zwart",
+        "date": "11-06-2010",
+        "category": "Movie",
+        "id": "502ceb34-4b92-4a29-873b-e93e7c630baf"
+    },
+    "d8b0af75-a760-44d1-a499-e2eeedecfb85": {
+        "name": "Wings of Fire",
+        "author": "A.P.J. Abdul Kalam",
+        "date": "01-01-1999",
+        "category": "Book",
+        "id": "d8b0af75-a760-44d1-a499-e2eeedecfb85"
+    },
+    "0078b216-e2bd-4302-bb9e-55f191328cf7": {
+        "name": "I Can and I Will",
+        "author": "Antonio Robins",
+        "date": "01-01-2020",
+        "category": "Book",
+        "id": "0078b216-e2bd-4302-bb9e-55f191328cf7"
+    },
+    "0bf7bbf1-563f-4373-9838-84443270673a": {
+        "name": "Top Gear",
+        "author": "Charlie Turner",
+        "date": "10-10-1993",
+        "category": "Magazine",
+        "id": "0bf7bbf1-563f-4373-9838-84443270673a"
+    },
+    "e9898e7d-24b3-4f67-8b93-e0a1ec4368b6": {
+        "name": "Giant Robot",
+        "author": "Eric Nakamura",
+        "date": "01-01-1994",
+        "category": "Magazine",
+        "id": "e9898e7d-24b3-4f67-8b93-e0a1ec4368b6"
+    },
+    "8e729376-b647-4237-a276-1b0185da53fd": {
+        "name": "One Story",
+        "author": "Hannah Tinti",
+        "date": "08-12-2002",
+        "category": "Magazine",
+        "id": "8e729376-b647-4237-a276-1b0185da53fd"
+    },
+    "64014fe6-be7f-4a41-8c89-73ff3b35f117": {
+        "name": "Rolling Stone",
+        "author": "Jann Wenner",
+        "date": "05-08-1967",
+        "category": "Magazine",
+        "id": "64014fe6-be7f-4a41-8c89-73ff3b35f117"
+    },
+    "0fa25d0d-a7e2-4baa-b11d-1ca6932a5191": {
+        "name": "The Sunday Times",
+        "author": "Mark Boxer",
+        "date": "10-11-1962",
+        "category": "Magazine",
+        "id": "0fa25d0d-a7e2-4baa-b11d-1ca6932a5191"
+    }
+}
