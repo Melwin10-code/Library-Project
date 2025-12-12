@@ -127,7 +127,7 @@ class LibraryGUI:
         tk.Label(frame, text="Category:", bg="#2A2A2A", fg="white").grid(row=0, column=0)
 
         self.category = ttk.Combobox(
-            frame, values=["All", "Book", "Movie", "Magazine"], width=15
+            frame, values=["All", "Books", "Movies", "Magazines"], width=15
         )
         self.category.current(0)
         self.category.grid(row=0, column=1)
