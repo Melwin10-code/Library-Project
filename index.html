@@ -1,412 +1,364 @@
 <!DOCTYPE HTML>
 <!--
-	Solid State by HTML5 UP
+	Story by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Digital Library System</title>
+		<title>Digital Library App | Presentation</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Custom styles for library system */
-			.library-demo {
-				background: #2c3e50;
-				padding: 20px;
-				border-radius: 10px;
+			.demo-table {
+				width: 100%;
+				border-collapse: collapse;
 				margin: 20px 0;
+				font-size: 0.9em;
 			}
-			
-			.status-badge {
+			.demo-table thead tr {
+				background-color: #2c3e50;
+				color: #ffffff;
+				text-align: left;
+			}
+			.demo-table th,
+			.demo-table td {
+				padding: 12px 15px;
+				border: 1px solid #ddd;
+			}
+			.demo-table tbody tr {
+				border-bottom: 1px solid #ddd;
+			}
+			.demo-table tbody tr:nth-of-type(even) {
+				background-color: #f3f3f3;
+			}
+			.demo-table tbody tr:hover {
+				background-color: #f1f7fd;
+			}
+			.category-badge {
 				display: inline-block;
-				padding: 5px 10px;
-				border-radius: 20px;
+				padding: 3px 8px;
+				border-radius: 12px;
 				font-size: 0.8em;
 				font-weight: bold;
-				margin-left: 10px;
 			}
-			
-			.status-running {
-				background: #27ae60;
-				color: white;
+			.book { background-color: #3498db; color: white; }
+			.movie { background-color: #2ecc71; color: white; }
+			.magazine { background-color: #e74c3c; color: white; }
+			.app-screenshot {
+				border: 2px solid #ddd;
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 			}
-			
-			.status-stopped {
-				background: #e74c3c;
-				color: white;
-			}
-			
-			.feature-list {
-				list-style: none;
-				padding-left: 0;
-			}
-			
-			.feature-list li {
-				padding: 5px 0;
-				padding-left: 30px;
-				position: relative;
-			}
-			
-			.feature-list li:before {
-				content: "✓";
-				position: absolute;
-				left: 0;
-				color: #27ae60;
-				font-weight: bold;
-			}
-			
-			.code-snippet {
-				background: #1a1a1a;
-				color: #f8f8f2;
-				padding: 15px;
-				border-radius: 5px;
-				font-family: 'Courier New', monospace;
-				font-size: 0.9em;
-				overflow-x: auto;
-				margin: 15px 0;
-			}
-			
-			.student-info {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				color: white;
+			.feature-card {
+				background: white;
 				padding: 20px;
-				border-radius: 10px;
-				margin: 20px 0;
-				text-align: center;
-			}
-			
-			.student-info h3 {
-				color: white;
-				margin-bottom: 15px;
+				border-radius: 8px;
+				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+				margin-bottom: 20px;
 			}
 		</style>
 	</head>
 	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Digital Library System</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">System Architecture</a></li>
-								<li><a href="elements.html">API Documentation</a></li>
-								<li><a href="#demo">Live Demo</a></li>
-								<li><a href="#features">Features</a></li>
+				<!-- One - Hero Section -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Digital Library App</h1>
+							<p class="major">A modern web application for managing your personal collection of books, movies, and magazines. Built with clean design and intuitive functionality.</p>
+							<p>Presented for Academic Review</p>
+							<ul class="actions stacked">
+								<li><a href="#features" class="button big wide smooth-scroll-middle">Explore Features</a></li>
 							</ul>
-							<a href="#" class="close">Close</a>
 						</div>
-					</nav>
+						<div class="image">
+							<img src="images/library-hero.jpg" alt="Digital Library Interface" />
+						</div>
+					</section>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon fa-book"></span></div>
-							<h2>Digital Library System</h2>
-							<p>A Full-Stack Python Application with Flask Backend & Tkinter GUI</p>
+				<!-- Two - App Overview -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="features">
+						<div class="content">
+							<h2>App Overview</h2>
+							<p>The Digital Library App is a comprehensive solution for organizing and managing media collections. It provides users with an intuitive interface to track their books, movies, and magazines in one centralized location.</p>
+							<div class="feature-card">
+								<h3>Core Features</h3>
+								<ul>
+									<li>📚 Organize books, movies, and magazines</li>
+									<li>🔍 Advanced search functionality</li>
+									<li>🏷️ Category-based filtering</li>
+									<li>➕ Add new items easily</li>
+									<li>🗑️ Delete unwanted items</li>
+									<li>📱 Responsive design for all devices</li>
+								</ul>
+							</div>
+							<ul class="actions stacked">
+								<li><a href="#demo" class="button smooth-scroll-middle">View Demo</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/app-overview.jpg" alt="App Interface Overview" class="app-screenshot" />
+						</div>
+					</section>
+
+				<!-- Three - Library Management -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Library Management</h2>
+							<p>Experience seamless management of your media collection with our intuitive interface.</p>
 							
-							<div class="student-info">
-								<h3>Student Project Presentation</h3>
-								<p><strong>Student:</strong> Melwin Chandy | <strong>ID:</strong> 100001905</p>
-								<p><strong>Course:</strong> Applied Mechatronic Systems | <strong>Professor:</strong> Esteban Pozo</p>
-								<p><strong>University:</strong> SRH University | <strong>Department:</strong> Advanced Programming</p>
+							<div class="feature-card">
+								<h4>Search & Filter System</h4>
+								<ul>
+									<li><strong>Search:</strong> Find items by exact name matching</li>
+									<li><strong>Filter:</strong> View by category (All, Book, Movie, Magazine)</li>
+									<li><strong>Sort:</strong> Organized by date added</li>
+								</ul>
+							</div>
+							
+							<div class="feature-card">
+								<h4>CRUD Operations</h4>
+								<ul>
+									<li><strong>Create:</strong> Add new media items with full details</li>
+									<li><strong>Read:</strong> View complete library collection</li>
+									<li><strong>Delete:</strong> Remove items with confirmation</li>
+								</ul>
+							</div>
+						</div>
+						<div class="image">
+							<img src="images/library-management.jpg" alt="Library Management Interface" class="app-screenshot" />
+						</div>
+					</section>
+
+				<!-- Four - Demo Section -->
+					<section class="wrapper style1 align-center" id="demo">
+						<div class="inner">
+							<h2>Sample Library Data</h2>
+							<p>Below is a demonstration of how the library data is organized and displayed in the application.</p>
+							
+							<!-- Demo Table -->
+							<div class="table-wrapper">
+								<table class="demo-table">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Author/Director</th>
+											<th>Date</th>
+											<th>Category</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Atomic Habits</td>
+											<td>James Clear</td>
+											<td>16-10-2018</td>
+											<td><span class="category-badge book">Book</span></td>
+										</tr>
+										<tr>
+											<td>The Pursuit of Happyness</td>
+											<td>Chris Gardner</td>
+											<td>03-05-2006</td>
+											<td><span class="category-badge movie">Movie</span></td>
+										</tr>
+										<tr>
+											<td>Wings of Fire</td>
+											<td>A.P.J. Abdul Kalam</td>
+											<td>01-01-1999</td>
+											<td><span class="category-badge book">Book</span></td>
+										</tr>
+										<tr>
+											<td>Rolling Stone</td>
+											<td>Jann Wenner</td>
+											<td>05-08-1967</td>
+											<td><span class="category-badge magazine">Magazine</span></td>
+										</tr>
+										<tr>
+											<td>Ford v Ferrari</td>
+											<td>Jez Butterworth</td>
+											<td>15-11-2019</td>
+											<td><span class="category-badge movie">Movie</span></td>
+										</tr>
+										<tr>
+											<td>Can't Hurt Me</td>
+											<td>David Goggins</td>
+											<td>04-12-2018</td>
+											<td><span class="category-badge book">Book</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<p><em>This table demonstrates the clean, organized presentation of library data in the application.</em></p>
+						</div>
+					</section>
+
+				<!-- Five - Technical Features -->
+					<section class="wrapper style1 align-center">
+						<div class="inner">
+							<h2>Technical Implementation</h2>
+							<p>The application is built using modern web technologies with a focus on performance and user experience.</p>
+							
+							<div class="items style1 medium onscroll-fade-in">
+								<section>
+									<span class="icon solid style2 major fa-code"></span>
+									<h3>Frontend</h3>
+									<p>HTML5, CSS3, JavaScript<br>Bootstrap 5 for responsive design<br>Clean, semantic markup</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-palette"></span>
+									<h3>UI/UX Design</h3>
+									<p>Intuitive user interface<br>Responsive across all devices<br>Accessibility considerations</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-cogs"></span>
+									<h3>Functionality</h3>
+									<p>Full CRUD operations<br>Real-time search & filtering<br>Form validation & error handling</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-database"></span>
+									<h3>Data Management</h3>
+									<p>Structured JSON data<br>RESTful API integration<br>Local storage fallback</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-mobile-alt"></span>
+									<h3>Responsive</h3>
+									<p>Works on desktop & mobile<br>Touch-friendly interface<br>Progressive enhancement</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-rocket"></span>
+									<h3>Performance</h3>
+									<p>Fast loading times<br>Optimized images & assets<br>Efficient JavaScript</p>
+								</section>
 							</div>
 						</div>
 					</section>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+				<!-- Six - Add Item Feature -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Add New Items</h2>
+							<p>The application includes a user-friendly form for adding new items to the library collection.</p>
+							
+							<div class="feature-card">
+								<h4>Add Form Features</h4>
+								<ul>
+									<li><strong>Name Field:</strong> Title of the book/movie/magazine</li>
+									<li><strong>Author Field:</strong> Author, director, or publisher</li>
+									<li><strong>Date Selection:</strong> Calendar date picker</li>
+									<li><strong>Category Dropdown:</strong> Book, Movie, or Magazine</li>
+									<li><strong>Form Validation:</strong> Required field checking</li>
+									<li><strong>Confirmation:</strong> Success feedback</li>
+								</ul>
+							</div>
+							
+							<p>The form includes client-side validation to ensure data integrity before submission.</p>
+						</div>
+						<div class="image">
+							<img src="images/add-form.jpg" alt="Add Item Form Interface" class="app-screenshot" />
+						</div>
+					</section>
 
-						<!-- One - Project Overview -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="System Architecture Diagram" /></a>
-									<div class="content">
-										<h2 class="major">Project Overview</h2>
-										<p>The Digital Library System is a comprehensive full-stack application that manages media collections including books, films, and magazines. Built with Python, it features a Flask REST API backend and a Tkinter GUI frontend.</p>
-										<ul class="feature-list">
-											<li>RESTful API with Flask</li>
-											<li>Tkinter Desktop Interface</li>
-											<li>JSON-based Data Storage</li>
-											<li>CRUD Operations</li>
-											<li>Search & Filter Capabilities</li>
-										</ul>
-										<a href="generic.html" class="special">View Architecture</a>
-									</div>
+				<!-- Seven - Project Details -->
+					<section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>Project Information</h2>
+							
+							<div class="feature-card" style="text-align: left;">
+								<h3>Academic Project</h3>
+								<p><strong>Purpose:</strong> This application was developed as part of an academic project to demonstrate proficiency in web development technologies and user interface design.</p>
+								
+								<h4>Learning Objectives</h4>
+								<ul>
+									<li>Implement a complete CRUD application</li>
+									<li>Design an intuitive user interface</li>
+									<li>Implement search and filter functionality</li>
+									<li>Create responsive web design</li>
+									<li>Practice clean code and documentation</li>
+								</ul>
+								
+								<h4>Technologies Used</h4>
+								<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+									<span style="background: #e34c26; color: white; padding: 5px 10px; border-radius: 4px;">HTML5</span>
+									<span style="background: #264de4; color: white; padding: 5px 10px; border-radius: 4px;">CSS3</span>
+									<span style="background: #f0db4f; color: black; padding: 5px 10px; border-radius: 4px;">JavaScript</span>
+									<span style="background: #563d7c; color: white; padding: 5px 10px; border-radius: 4px;">Bootstrap 5</span>
+									<span style="background: #61dbfb; color: black; padding: 5px 10px; border-radius: 4px;">React.js</span>
+									<span style="background: #68a063; color: white; padding: 5px 10px; border-radius: 4px;">Node.js</span>
 								</div>
-							</section>
-
-						<!-- Two - Tech Stack -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="Technology Stack" /></a>
-									<div class="content">
-										<h2 class="major">Technology Stack</h2>
-										<p>Modern technologies and best practices used in development:</p>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<h4>Backend</h4>
-												<ul>
-													<li><strong>Python 3.11</strong></li>
-													<li><strong>Flask</strong> - Web Framework</li>
-													<li><strong>JSON</strong> - Data Storage</li>
-													<li><strong>HTTP/REST</strong> - API Protocol</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<h4>Frontend</h4>
-												<ul>
-													<li><strong>Tkinter</strong> - GUI Framework</li>
-													<li><strong>HTML5/CSS3</strong> - Documentation</li>
-													<li><strong>JavaScript</strong> - Interactive Elements</li>
-												</ul>
-											</div>
-										</div>
-										<a href="#features" class="special">See Features</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three - System Features -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="System Features" /></a>
-									<div class="content">
-										<h2 class="major">Key Features</h2>
-										<p>Comprehensive media management system with the following capabilities:</p>
-										<ul class="feature-list">
-											<li>📚 List all media items with pagination</li>
-											<li>🔍 Advanced search by title, author, category</li>
-											<li>📁 Filter by media type (Books, Films, Magazines)</li>
-											<li>➕ Add new media entries with validation</li>
-											<li>✏️ Edit existing media information</li>
-											<li>🗑️ Delete media items with confirmation</li>
-											<li>📊 View detailed information for each item</li>
-											<li>💾 Automatic JSON data persistence</li>
-										</ul>
-										<a href="#demo" class="special">Try Live Demo</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Four - Live Demo Section -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner" id="demo">
-									<h2 class="major">Live System Demo</h2>
-									<p>Current server status: 
-										<span class="status-badge status-running">RUNNING</span>
-										<span style="font-family: monospace;">http://127.0.0.1:5080</span>
-									</p>
-									
-									<div class="library-demo">
-										<h3>API Endpoints</h3>
-										<div class="code-snippet">
-GET /media              # List all media items<br>
-GET /media/{id}         # Get specific media<br>
-POST /media             # Add new media<br>
-PUT /media/{id}         # Update media<br>
-DELETE /media/{id}      # Delete media<br>
-GET /media/category/{type} # Filter by category
-										</div>
-										
-										<h3>Sample Media Data Structure</h3>
-										<div class="code-snippet">
-{
-  "id": 1,
-  "title": "The Great Gatsby",
-  "type": "book",
-  "author": "F. Scott Fitzgerald",
-  "year": 1925,
-  "category": "Fiction",
-  "description": "A classic novel about the American Dream"
-}
-										</div>
-										
-										<h3>Quick Start Commands</h3>
-										<div class="code-snippet">
-# Start Flask Backend Server
-python main.py
-
-# Launch Tkinter GUI
-python gui.py
-
-# Test API Endpoint
-curl http://127.0.0.1:5080/media
-										</div>
-									</div>
-									
-									<section class="features" id="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="Backend Architecture" /></a>
-											<h3 class="major">Backend Architecture</h3>
-											<p>Flask-based REST API with modular design, error handling, and JSON data management.</p>
-											<a href="generic.html#backend" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="Frontend Interface" /></a>
-											<h3 class="major">Frontend Interface</h3>
-											<p>Tkinter GUI with intuitive controls, real-time updates, and responsive design.</p>
-											<a href="generic.html#frontend" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="Data Management" /></a>
-											<h3 class="major">Data Management</h3>
-											<p>JSON-based storage with CRUD operations, validation, and data persistence.</p>
-											<a href="generic.html#data" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="API Documentation" /></a>
-											<h3 class="major">API Documentation</h3>
-											<p>Complete REST API documentation with examples and error codes.</p>
-											<a href="elements.html" class="special">Learn more</a>
-										</article>
-									</section>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">View Complete Documentation</a></li>
-									</ul>
-								</div>
-							</section>
-
+							</div>
+							
+							<h3 style="margin-top: 40px;">Future Enhancements</h3>
+							<div class="feature-card" style="text-align: left;">
+								<ul>
+									<li>📊 Advanced analytics and statistics</li>
+									<li>📱 Mobile application version</li>
+									<li>☁️ Cloud synchronization</li>
+									<li>👥 Multi-user support</li>
+									<li>⭐ Rating and review system</li>
+									<li>📄 Export/import functionality</li>
+								</ul>
+							</div>
+						</div>
 					</section>
 
 				<!-- Footer -->
-					<section id="footer">
+					<footer class="wrapper style1 align-center">
 						<div class="inner">
-							<h2 class="major">Project Information</h2>
-							<p><strong>Digital Library System</strong> - A comprehensive full-stack application demonstrating modern software development practices, REST API design, and desktop application development.</p>
-							
-							<h3>Project Structure</h3>
-							<div class="code-snippet" style="font-size: 0.8em;">
-Library Project/<br>
-├── main.py              # Flask backend server<br>
-├── gui.py               # Tkinter frontend application<br>
-├── media.json           # Data storage (books, films, magazines)<br>
-├── index.html           # Project documentation (this page)<br>
-├── generic.html         # System architecture details<br>
-├── elements.html        # API documentation<br>
-├── assets/              # CSS, JS, and images<br>
-└── README.txt           # Project overview
-							</div>
-							
-							<h3>Development Highlights</h3>
-							<ul class="feature-list">
-								<li>Modular and maintainable code structure</li>
-								<li>Comprehensive error handling</li>
-								<li>Data validation and sanitization</li>
-								<li>User-friendly interface design</li>
-								<li>Detailed documentation</li>
-								<li>Follows PEP 8 style guidelines</li>
+							<h3>Digital Library App Presentation</h3>
+							<p>Academic Project | Web Development</p>
+							<p>Thank you for reviewing this project presentation.</p>
+							<ul class="icons">
+								<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-codepen"><span class="label">CodePen</span></a></li>
+								<li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							
-							<div class="student-info">
-								<h3>Student & Course Information</h3>
-								<div class="row">
-									<div class="col-6 col-12-medium">
-										<p><strong>Student Name:</strong> Melwin Chandy</p>
-										<p><strong>Student ID:</strong> 100001905</p>
-										<p><strong>Course:</strong> Applied Mechatronic Systems</p>
-									</div>
-									<div class="col-6 col-12-medium">
-										<p><strong>Professor:</strong> Esteban Pozo</p>
-										<p><strong>University:</strong> SRH University</p>
-										<p><strong>Department:</strong> Advanced Programming</p>
-									</div>
-								</div>
-							</div>
-							
-							<form method="post" action="#" id="contactForm">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Student Name</label>
-										<input type="text" name="name" id="name" value="Melwin Chandy" readonly />
-									</div>
-									<div class="field">
-										<label for="studentId">Student ID</label>
-										<input type="text" name="studentId" id="studentId" value="100001905" readonly />
-									</div>
-									<div class="field half">
-										<label for="course">Course</label>
-										<input type="text" name="course" id="course" value="Applied Mechatronic Systems" readonly />
-									</div>
-									<div class="field half">
-										<label for="professor">Professor</label>
-										<input type="text" name="professor" id="professor" value="Esteban Pozo" readonly />
-									</div>
-								</div>
-								<ul class="actions">
-									<li><a href="#" class="button" onclick="window.print()">Print Documentation</a></li>
-									<li><a href="#banner" class="button">Back to Top</a></li>
-								</ul>
-							</form>
-							
-							<ul class="contact">
-								<li class="icon solid fa-university">
-									<strong>SRH University</strong><br />
-									Advanced Programming Department<br />
-									Applied Mechatronic System
-								</li>
-								<li class="icon solid fa-user-graduate">Student: Melwin Chandy</li>
-								<li class="icon solid fa-id-card">ID: 100001905</li>
-								<li class="icon solid fa-chalkboard-teacher">Professor: Esteban Pozo</li>
-								<li class="icon solid fa-calendar">Submission Date: <span id="currentDate"></span></li>
-								<li class="icon solid fa-code">Built with: Python, Flask, Tkinter</li>
-							</ul>
-							
-							<ul class="copyright">
-								<li>&copy; Melwin Chandy. Digital Library System Project.</li>
-								<li>Student ID: 100001905 | SRH University</li>
-								<li>Template Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+							<p>&copy; Digital Library App. Template: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
-					</section>
+					</footer>
 
 			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
 			<script>
-				// Update current date
-				document.addEventListener('DOMContentLoaded', function() {
-					const now = new Date();
-					const options = { year: 'numeric', month: 'long', day: 'numeric' };
-					const formattedDate = now.toLocaleDateString('en-US', options);
+				// Simple demo functionality
+				$(document).ready(function() {
+					// Highlight table rows on hover
+					$('.demo-table tbody tr').hover(
+						function() {
+							$(this).css('transform', 'translateY(-2px)');
+							$(this).css('box-shadow', '0 2px 8px rgba(0,0,0,0.1)');
+						},
+						function() {
+							$(this).css('transform', 'translateY(0)');
+							$(this).css('box-shadow', 'none');
+						}
+					);
 					
-					// Update date in footer
-					document.getElementById('currentDate').textContent = formattedDate;
-					
-					// Simulate server status
-					const statusBadge = document.querySelector('.status-badge');
-					setInterval(() => {
-						statusBadge.classList.toggle('status-running');
-						statusBadge.classList.toggle('status-stopped');
-						statusBadge.textContent = statusBadge.classList.contains('status-running') ? 'RUNNING' : 'STOPPED';
-					}, 5000);
-					
-					// Update banner date if needed
-					const bannerDate = document.querySelector('.student-info p:last-child');
-					if (bannerDate && bannerDate.textContent.includes('Date')) {
-						bannerDate.innerHTML = bannerDate.innerHTML.replace('[Date]', formattedDate);
-					}
+					// Smooth scrolling for navigation
+					$('a[href*="#"]').on('click', function(e) {
+						e.preventDefault();
+						
+						$('html, body').animate(
+							{
+								scrollTop: $($(this).attr('href')).offset().top,
+							},
+							500,
+							'linear'
+						);
+					});
 				});
 			</script>
 
