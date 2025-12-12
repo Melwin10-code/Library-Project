@@ -68,6 +68,20 @@
 				overflow-x: auto;
 				margin: 15px 0;
 			}
+			
+			.student-info {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				padding: 20px;
+				border-radius: 10px;
+				margin: 20px 0;
+				text-align: center;
+			}
+			
+			.student-info h3 {
+				color: white;
+				margin-bottom: 15px;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -104,8 +118,13 @@
 							<div class="logo"><span class="icon fa-book"></span></div>
 							<h2>Digital Library System</h2>
 							<p>A Full-Stack Python Application with Flask Backend & Tkinter GUI</p>
-							<p>Project by: <strong>[Your Name/Student ID]</strong></p>
-							<p>Course: <strong>[Course Name]</strong></p>
+							
+							<div class="student-info">
+								<h3>Student Project Presentation</h3>
+								<p><strong>Student:</strong> Melwin Chandy | <strong>ID:</strong> 100001905</p>
+								<p><strong>Course:</strong> Applied Mechatronic Systems | <strong>Professor:</strong> Esteban Pozo</p>
+								<p><strong>University:</strong> SRH University | <strong>Department:</strong> Advanced Programming</p>
+							</div>
 						</div>
 					</section>
 
@@ -293,47 +312,64 @@ Library Project/<br>
 								<li>Follows PEP 8 style guidelines</li>
 							</ul>
 							
+							<div class="student-info">
+								<h3>Student & Course Information</h3>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<p><strong>Student Name:</strong> Melwin Chandy</p>
+										<p><strong>Student ID:</strong> 100001905</p>
+										<p><strong>Course:</strong> Applied Mechatronic Systems</p>
+									</div>
+									<div class="col-6 col-12-medium">
+										<p><strong>Professor:</strong> Esteban Pozo</p>
+										<p><strong>University:</strong> SRH University</p>
+										<p><strong>Department:</strong> Advanced Programming</p>
+									</div>
+								</div>
+							</div>
+							
 							<form method="post" action="#" id="contactForm">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Student Name</label>
-										<input type="text" name="name" id="name" value="[Your Name]" readonly />
+										<input type="text" name="name" id="name" value="Melwin Chandy" readonly />
 									</div>
 									<div class="field">
 										<label for="studentId">Student ID</label>
-										<input type="text" name="studentId" id="studentId" value="[Your Student ID]" readonly />
+										<input type="text" name="studentId" id="studentId" value="100001905" readonly />
 									</div>
-									<div class="field">
+									<div class="field half">
 										<label for="course">Course</label>
-										<input type="text" name="course" id="course" value="[Course Name]" readonly />
+										<input type="text" name="course" id="course" value="Applied Mechatronic Systems" readonly />
 									</div>
-									<div class="field">
+									<div class="field half">
 										<label for="professor">Professor</label>
-										<input type="text" name="professor" id="professor" value="[Professor's Name]" readonly />
+										<input type="text" name="professor" id="professor" value="Esteban Pozo" readonly />
 									</div>
 								</div>
 								<ul class="actions">
 									<li><a href="#" class="button" onclick="window.print()">Print Documentation</a></li>
+									<li><a href="#banner" class="button">Back to Top</a></li>
 								</ul>
 							</form>
 							
 							<ul class="contact">
 								<li class="icon solid fa-university">
-									<strong>[University Name]</strong><br />
-									[Department Name]<br />
-									[Course Code] - [Semester/Year]
+									<strong>SRH University</strong><br />
+									Advanced Programming Department<br />
+									Applied Mechatronic System
 								</li>
-								<li class="icon solid fa-user-graduate">Student: [Your Name]</li>
-								<li class="icon solid fa-id-card">ID: [Student ID]</li>
-								<li class="icon solid fa-envelope"><a href="mailto:[your.email@university.edu]">[your.email@university.edu]</a></li>
-								<li class="icon solid fa-calendar">Submission Date: [Date]</li>
+								<li class="icon solid fa-user-graduate">Student: Melwin Chandy</li>
+								<li class="icon solid fa-id-card">ID: 100001905</li>
+								<li class="icon solid fa-chalkboard-teacher">Professor: Esteban Pozo</li>
+								<li class="icon solid fa-calendar">Submission Date: <span id="currentDate"></span></li>
 								<li class="icon solid fa-code">Built with: Python, Flask, Tkinter</li>
 							</ul>
 							
 							<ul class="copyright">
-								<li>&copy; [Your Name]. Digital Library System Project.</li>
+								<li>&copy; Melwin Chandy. Digital Library System Project.</li>
+								<li>Student ID: 100001905 | SRH University</li>
 								<li>Template Design: <a href="http://html5up.net">HTML5 UP</a></li>
-								<li>Academic Project - [University Name]</li>
 							</ul>
 						</div>
 					</section>
@@ -353,11 +389,10 @@ Library Project/<br>
 				document.addEventListener('DOMContentLoaded', function() {
 					const now = new Date();
 					const options = { year: 'numeric', month: 'long', day: 'numeric' };
-					const dateElements = document.querySelectorAll('.icon.fa-calendar');
-					if (dateElements.length > 0) {
-						dateElements[0].innerHTML = dateElements[0].innerHTML.replace('[Date]', 
-							now.toLocaleDateString('en-US', options));
-					}
+					const formattedDate = now.toLocaleDateString('en-US', options);
+					
+					// Update date in footer
+					document.getElementById('currentDate').textContent = formattedDate;
 					
 					// Simulate server status
 					const statusBadge = document.querySelector('.status-badge');
@@ -366,6 +401,12 @@ Library Project/<br>
 						statusBadge.classList.toggle('status-stopped');
 						statusBadge.textContent = statusBadge.classList.contains('status-running') ? 'RUNNING' : 'STOPPED';
 					}, 5000);
+					
+					// Update banner date if needed
+					const bannerDate = document.querySelector('.student-info p:last-child');
+					if (bannerDate && bannerDate.textContent.includes('Date')) {
+						bannerDate.innerHTML = bannerDate.innerHTML.replace('[Date]', formattedDate);
+					}
 				});
 			</script>
 
