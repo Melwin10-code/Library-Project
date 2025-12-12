@@ -48,16 +48,44 @@
 			.movie { background-color: #2ecc71; color: white; }
 			.magazine { background-color: #e74c3c; color: white; }
 			.app-screenshot {
-				border: 2px solid #ddd;
-				border-radius: 8px;
-				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+				border: 3px solid #e0e0e0;
+				border-radius: 10px;
+				box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+				transition: transform 0.3s ease;
+				width: 100%;
+				height: auto;
+			}
+			.app-screenshot:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 			}
 			.feature-card {
 				background: white;
-				padding: 20px;
-				border-radius: 8px;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-				margin-bottom: 20px;
+				padding: 25px;
+				border-radius: 10px;
+				box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+				margin-bottom: 25px;
+				border-left: 5px solid #3498db;
+			}
+			.screenshot-caption {
+				text-align: center;
+				font-style: italic;
+				color: #666;
+				margin-top: 10px;
+				font-size: 0.9em;
+			}
+			.tech-badge {
+				background: #f1f8ff;
+				color: #0366d6;
+				padding: 8px 15px;
+				border-radius: 20px;
+				font-size: 0.9em;
+				margin: 5px;
+				display: inline-block;
+				border: 1px solid #d1d5da;
+			}
+			.image-container {
+				position: relative;
 			}
 		</style>
 	</head>
@@ -70,78 +98,131 @@
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Digital Library App</h1>
-							<p class="major">A modern web application for managing your personal collection of books, movies, and magazines. Built with clean design and intuitive functionality.</p>
-							<p>Presented for Academic Review</p>
+							<p class="major">A modern web application for organizing and managing your personal collection of books, movies, and magazines. Built with clean design and intuitive functionality.</p>
+							<p><strong>Academic Project Presentation</strong></p>
 							<ul class="actions stacked">
 								<li><a href="#features" class="button big wide smooth-scroll-middle">Explore Features</a></li>
 							</ul>
 						</div>
-						<div class="image">
-							<img src="images/library-hero.jpg" alt="Digital Library Interface" />
+						<div class="image image-container">
+							<!-- Your main library interface screenshot -->
+							<img src="images/Library.JPG" alt="Digital Library Main Interface" class="app-screenshot" />
+							<p class="screenshot-caption">Main Library Interface - Complete Media Collection View</p>
 						</div>
 					</section>
 
-				<!-- Two - App Overview -->
+				<!-- Two - Core Features -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="features">
 						<div class="content">
-							<h2>App Overview</h2>
-							<p>The Digital Library App is a comprehensive solution for organizing and managing media collections. It provides users with an intuitive interface to track their books, movies, and magazines in one centralized location.</p>
+							<h2>Core Features</h2>
+							<p>The Digital Library App provides a comprehensive solution for managing your media collection with these key features:</p>
+							
 							<div class="feature-card">
-								<h3>Core Features</h3>
+								<h4>📚 Complete Media Management</h4>
 								<ul>
-									<li>📚 Organize books, movies, and magazines</li>
-									<li>🔍 Advanced search functionality</li>
-									<li>🏷️ Category-based filtering</li>
-									<li>➕ Add new items easily</li>
-									<li>🗑️ Delete unwanted items</li>
-									<li>📱 Responsive design for all devices</li>
+									<li><strong>Books:</strong> Track authors, publication dates, and genres</li>
+									<li><strong>Movies:</strong> Organize by director, release year, and format</li>
+									<li><strong>Magazines:</strong> Catalog issues, publishers, and publication dates</li>
 								</ul>
 							</div>
+							
+							<div class="feature-card">
+								<h4>🔍 Smart Search & Filter</h4>
+								<ul>
+									<li>Search by exact name matching</li>
+									<li>Filter by category (Book/Movie/Magazine)</li>
+									<li>Quick reset to view all items</li>
+									<li>Category dropdown for easy filtering</li>
+								</ul>
+							</div>
+							
 							<ul class="actions stacked">
-								<li><a href="#demo" class="button smooth-scroll-middle">View Demo</a></li>
+								<li><a href="#demo" class="button smooth-scroll-middle">See It In Action</a></li>
 							</ul>
 						</div>
-						<div class="image">
-							<img src="images/app-overview.jpg" alt="App Interface Overview" class="app-screenshot" />
+						<div class="image image-container">
+							<!-- Your search functionality screenshot -->
+							<img src="images/Search.JPG" alt="Search Functionality" class="app-screenshot" />
+							<p class="screenshot-caption">Search Functionality - Find Items Quickly</p>
 						</div>
 					</section>
 
-				<!-- Three - Library Management -->
+				<!-- Three - Filter Functionality -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>Library Management</h2>
-							<p>Experience seamless management of your media collection with our intuitive interface.</p>
+							<h2>Smart Filtering</h2>
+							<p>Easily organize and view your collection by category with our intuitive dropdown filter system.</p>
 							
 							<div class="feature-card">
-								<h4>Search & Filter System</h4>
+								<h4>🎯 Category Filtering</h4>
 								<ul>
-									<li><strong>Search:</strong> Find items by exact name matching</li>
-									<li><strong>Filter:</strong> View by category (All, Book, Movie, Magazine)</li>
-									<li><strong>Sort:</strong> Organized by date added</li>
+									<li><strong>All Categories:</strong> View complete library collection</li>
+									<li><strong>Books Only:</strong> Filter to see only books</li>
+									<li><strong>Movies Only:</strong> Isolate movie collection</li>
+									<li><strong>Magazines Only:</strong> View magazine issues separately</li>
 								</ul>
 							</div>
 							
 							<div class="feature-card">
-								<h4>CRUD Operations</h4>
+								<h4>⚡ Instant Results</h4>
 								<ul>
-									<li><strong>Create:</strong> Add new media items with full details</li>
-									<li><strong>Read:</strong> View complete library collection</li>
-									<li><strong>Delete:</strong> Remove items with confirmation</li>
+									<li>Real-time filtering without page reloads</li>
+									<li>Clear visual indicators of active filter</li>
+									<li>Easy reset to view all items</li>
+									<li>Maintains search context while filtering</li>
 								</ul>
 							</div>
+							
+							<p>The dropdown filter provides a clean, user-friendly way to navigate large collections.</p>
 						</div>
-						<div class="image">
-							<img src="images/library-management.jpg" alt="Library Management Interface" class="app-screenshot" />
+						<div class="image image-container">
+							<!-- Your dropdown filter screenshot -->
+							<img src="images/Dropdown.JPG" alt="Category Filter Dropdown" class="app-screenshot" />
+							<p class="screenshot-caption">Category Filter Dropdown - Organized View by Media Type</p>
 						</div>
 					</section>
 
-				<!-- Four - Demo Section -->
+				<!-- Four - Add Functionality -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Add New Items</h2>
+							<p>Adding new media to your collection is simple and intuitive with our user-friendly form interface.</p>
+							
+							<div class="feature-card">
+								<h4>➕ Easy Data Entry</h4>
+								<ul>
+									<li><strong>Simple Form:</strong> Clean, uncluttered input fields</li>
+									<li><strong>Date Picker:</strong> Calendar selection for accurate dates</li>
+									<li><strong>Category Selection:</strong> Dropdown with clear options</li>
+									<li><strong>Validation:</strong> Required field checking</li>
+								</ul>
+							</div>
+							
+							<div class="feature-card">
+								<h4>✅ Instant Feedback</h4>
+								<ul>
+									<li>Confirmation messages on success</li>
+									<li>Error highlighting for invalid inputs</li>
+									<li>Real-time form validation</li>
+									<li>Auto-refresh of library view</li>
+								</ul>
+							</div>
+							
+							<p>The form ensures data integrity while maintaining a smooth user experience.</p>
+						</div>
+						<div class="image image-container">
+							<!-- Your add item form screenshot -->
+							<img src="images/Add Item.JPG" alt="Add New Item Form" class="app-screenshot" />
+							<p class="screenshot-caption">Add New Item Form - Simple Data Entry Interface</p>
+						</div>
+					</section>
+
+				<!-- Five - Demo Data -->
 					<section class="wrapper style1 align-center" id="demo">
 						<div class="inner">
 							<h2>Sample Library Data</h2>
-							<p>Below is a demonstration of how the library data is organized and displayed in the application.</p>
+							<p>Here's an example of how data is organized and displayed in the application:</p>
 							
-							<!-- Demo Table -->
 							<div class="table-wrapper">
 								<table class="demo-table">
 									<thead>
@@ -154,154 +235,224 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td>Atomic Habits</td>
+											<td><strong>Atomic Habits</strong></td>
 											<td>James Clear</td>
 											<td>16-10-2018</td>
-											<td><span class="category-badge book">Book</span></td>
+											<td><span class="category-badge book">📚 Book</span></td>
 										</tr>
 										<tr>
-											<td>The Pursuit of Happyness</td>
+											<td><strong>The Pursuit of Happyness</strong></td>
 											<td>Chris Gardner</td>
 											<td>03-05-2006</td>
-											<td><span class="category-badge movie">Movie</span></td>
+											<td><span class="category-badge movie">🎬 Movie</span></td>
 										</tr>
 										<tr>
-											<td>Wings of Fire</td>
+											<td><strong>Wings of Fire</strong></td>
 											<td>A.P.J. Abdul Kalam</td>
 											<td>01-01-1999</td>
-											<td><span class="category-badge book">Book</span></td>
+											<td><span class="category-badge book">📚 Book</span></td>
 										</tr>
 										<tr>
-											<td>Rolling Stone</td>
+											<td><strong>Rolling Stone</strong></td>
 											<td>Jann Wenner</td>
 											<td>05-08-1967</td>
-											<td><span class="category-badge magazine">Magazine</span></td>
+											<td><span class="category-badge magazine">📰 Magazine</span></td>
 										</tr>
 										<tr>
-											<td>Ford v Ferrari</td>
+											<td><strong>Ford v Ferrari</strong></td>
 											<td>Jez Butterworth</td>
 											<td>15-11-2019</td>
-											<td><span class="category-badge movie">Movie</span></td>
+											<td><span class="category-badge movie">🎬 Movie</span></td>
 										</tr>
 										<tr>
-											<td>Can't Hurt Me</td>
+											<td><strong>Can't Hurt Me</strong></td>
 											<td>David Goggins</td>
 											<td>04-12-2018</td>
-											<td><span class="category-badge book">Book</span></td>
+											<td><span class="category-badge book">📚 Book</span></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 							
-							<p><em>This table demonstrates the clean, organized presentation of library data in the application.</em></p>
+							<div class="feature-card" style="margin-top: 30px;">
+								<h4>📊 Data Organization</h4>
+								<p>The table demonstrates:</p>
+								<ul>
+									<li>Clear column headers for easy scanning</li>
+									<li>Color-coded category badges for quick identification</li>
+									<li>Consistent date formatting (DD-MM-YYYY)</li>
+									<li>Responsive design that works on all screen sizes</li>
+									<li>Clean separation of different media types</li>
+								</ul>
+							</div>
+							
+							<div style="display: flex; justify-content: center; gap: 20px; margin: 30px 0; flex-wrap: wrap;">
+								<div style="text-align: center;">
+									<div style="width: 100px; height: 100px; background: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white; font-size: 2em;">📚</div>
+									<strong>Books</strong><br>
+									<span style="color: #666; font-size: 0.9em;">Blue color coding</span>
+								</div>
+								<div style="text-align: center;">
+									<div style="width: 100px; height: 100px; background: #2ecc71; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white; font-size: 2em;">🎬</div>
+									<strong>Movies</strong><br>
+									<span style="color: #666; font-size: 0.9em;">Green color coding</span>
+								</div>
+								<div style="text-align: center;">
+									<div style="width: 100px; height: 100px; background: #e74c3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white; font-size: 2em;">📰</div>
+									<strong>Magazines</strong><br>
+									<span style="color: #666; font-size: 0.9em;">Red color coding</span>
+								</div>
+							</div>
 						</div>
 					</section>
 
-				<!-- Five - Technical Features -->
+				<!-- Six - Technical Implementation -->
 					<section class="wrapper style1 align-center">
 						<div class="inner">
-							<h2>Technical Implementation</h2>
-							<p>The application is built using modern web technologies with a focus on performance and user experience.</p>
+							<h2>Technical Architecture</h2>
+							<p>The application is built using modern web technologies with a focus on performance, maintainability, and user experience.</p>
+							
+							<div style="margin: 30px 0;">
+								<h4>Technology Stack</h4>
+								<div>
+									<span class="tech-badge">HTML5</span>
+									<span class="tech-badge">CSS3</span>
+									<span class="tech-badge">JavaScript (ES6+)</span>
+									<span class="tech-badge">Bootstrap 5</span>
+									<span class="tech-badge">Responsive Design</span>
+									<span class="tech-badge">CRUD Operations</span>
+									<span class="tech-badge">JSON Data</span>
+									<span class="tech-badge">Git Version Control</span>
+								</div>
+							</div>
 							
 							<div class="items style1 medium onscroll-fade-in">
 								<section>
 									<span class="icon solid style2 major fa-code"></span>
-									<h3>Frontend</h3>
-									<p>HTML5, CSS3, JavaScript<br>Bootstrap 5 for responsive design<br>Clean, semantic markup</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-palette"></span>
-									<h3>UI/UX Design</h3>
-									<p>Intuitive user interface<br>Responsive across all devices<br>Accessibility considerations</p>
+									<h3>Frontend Design</h3>
+									<p>Clean, semantic HTML5 markup with ARIA accessibility attributes and responsive CSS grid/flexbox layouts.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-cogs"></span>
-									<h3>Functionality</h3>
-									<p>Full CRUD operations<br>Real-time search & filtering<br>Form validation & error handling</p>
+									<h3>CRUD Operations</h3>
+									<p>Complete Create, Read, Update, Delete functionality for full library management.</p>
 								</section>
 								<section>
-									<span class="icon solid style2 major fa-database"></span>
-									<h3>Data Management</h3>
-									<p>Structured JSON data<br>RESTful API integration<br>Local storage fallback</p>
+									<span class="icon solid style2 major fa-search"></span>
+									<h3>Search & Filter</h3>
+									<p>Real-time search and category filtering without page reloads.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-mobile-alt"></span>
-									<h3>Responsive</h3>
-									<p>Works on desktop & mobile<br>Touch-friendly interface<br>Progressive enhancement</p>
+									<h3>Responsive Design</h3>
+									<p>Mobile-first approach ensures optimal experience on all devices.</p>
+								</section>
+								<section>
+									<span class="icon solid style2 major fa-table"></span>
+									<h3>Data Organization</h3>
+									<p>Structured table layout with clear categorization and sorting.</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-rocket"></span>
 									<h3>Performance</h3>
-									<p>Fast loading times<br>Optimized images & assets<br>Efficient JavaScript</p>
+									<p>Optimized asset loading and efficient DOM manipulation for fast performance.</p>
 								</section>
 							</div>
-						</div>
-					</section>
-
-				<!-- Six - Add Item Feature -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>Add New Items</h2>
-							<p>The application includes a user-friendly form for adding new items to the library collection.</p>
 							
-							<div class="feature-card">
-								<h4>Add Form Features</h4>
-								<ul>
-									<li><strong>Name Field:</strong> Title of the book/movie/magazine</li>
-									<li><strong>Author Field:</strong> Author, director, or publisher</li>
-									<li><strong>Date Selection:</strong> Calendar date picker</li>
-									<li><strong>Category Dropdown:</strong> Book, Movie, or Magazine</li>
-									<li><strong>Form Validation:</strong> Required field checking</li>
-									<li><strong>Confirmation:</strong> Success feedback</li>
-								</ul>
+							<div class="feature-card" style="margin-top: 30px;">
+								<h4>📱 App Features Summary</h4>
+								<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+									<div>
+										<h5>Data Management</h5>
+										<ul>
+											<li>Add new items</li>
+											<li>View all items</li>
+											<li>Delete items</li>
+											<li>Organize by category</li>
+										</ul>
+									</div>
+									<div>
+										<h5>Navigation</h5>
+										<ul>
+											<li>Search by name</li>
+											<li>Filter by category</li>
+											<li>Reset filters</li>
+											<li>Quick actions</li>
+										</ul>
+									</div>
+									<div>
+										<h5>User Experience</h5>
+										<ul>
+											<li>Clean interface</li>
+											<li>Intuitive controls</li>
+											<li>Immediate feedback</li>
+											<li>Error handling</li>
+										</ul>
+									</div>
+								</div>
 							</div>
-							
-							<p>The form includes client-side validation to ensure data integrity before submission.</p>
-						</div>
-						<div class="image">
-							<img src="images/add-form.jpg" alt="Add Item Form Interface" class="app-screenshot" />
 						</div>
 					</section>
 
 				<!-- Seven - Project Details -->
 					<section class="wrapper style1 align-center">
-						<div class="inner medium">
+						<div class="inner">
 							<h2>Project Information</h2>
 							
-							<div class="feature-card" style="text-align: left;">
-								<h3>Academic Project</h3>
-								<p><strong>Purpose:</strong> This application was developed as part of an academic project to demonstrate proficiency in web development technologies and user interface design.</p>
-								
-								<h4>Learning Objectives</h4>
-								<ul>
-									<li>Implement a complete CRUD application</li>
-									<li>Design an intuitive user interface</li>
-									<li>Implement search and filter functionality</li>
-									<li>Create responsive web design</li>
-									<li>Practice clean code and documentation</li>
-								</ul>
-								
-								<h4>Technologies Used</h4>
-								<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-									<span style="background: #e34c26; color: white; padding: 5px 10px; border-radius: 4px;">HTML5</span>
-									<span style="background: #264de4; color: white; padding: 5px 10px; border-radius: 4px;">CSS3</span>
-									<span style="background: #f0db4f; color: black; padding: 5px 10px; border-radius: 4px;">JavaScript</span>
-									<span style="background: #563d7c; color: white; padding: 5px 10px; border-radius: 4px;">Bootstrap 5</span>
-									<span style="background: #61dbfb; color: black; padding: 5px 10px; border-radius: 4px;">React.js</span>
-									<span style="background: #68a063; color: white; padding: 5px 10px; border-radius: 4px;">Node.js</span>
+							<div class="feature-card">
+								<h3>🎓 Academic Project Context</h3>
+								<p><strong>Objective:</strong> Demonstrate proficiency in web development principles including CRUD operations, user interface design, and data management.</p>
+								<p><strong>Key Skills Demonstrated:</strong> Frontend development, responsive design, JavaScript programming, user experience design.</p>
+							</div>
+							
+							<div class="feature-card">
+								<h3>✅ Learning Outcomes</h3>
+								<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
+									<div>
+										<h4>Technical Skills</h4>
+										<ul>
+											<li>Implementing complete CRUD operations</li>
+											<li>Form validation and user input handling</li>
+											<li>Responsive web design principles</li>
+											<li>JavaScript event handling</li>
+											<li>Dynamic content manipulation</li>
+										</ul>
+									</div>
+									<div>
+										<h4>Design Skills</h4>
+										<ul>
+											<li>User-centered interface design</li>
+											<li>Consistent visual hierarchy</li>
+											<li>Intuitive navigation patterns</li>
+											<li>Accessibility considerations</li>
+											<li>Professional presentation</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 							
-							<h3 style="margin-top: 40px;">Future Enhancements</h3>
-							<div class="feature-card" style="text-align: left;">
-								<ul>
-									<li>📊 Advanced analytics and statistics</li>
-									<li>📱 Mobile application version</li>
-									<li>☁️ Cloud synchronization</li>
-									<li>👥 Multi-user support</li>
-									<li>⭐ Rating and review system</li>
-									<li>📄 Export/import functionality</li>
-								</ul>
+							<div class="feature-card">
+								<h3>🔮 Future Enhancements</h3>
+								<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+									<div>
+										<h4>Short Term</h4>
+										<ul>
+											<li>⭐ Rating system for items</li>
+											<li>🔍 Advanced search with multiple criteria</li>
+											<li>📊 Statistics dashboard</li>
+											<li>📱 Progressive Web App (PWA)</li>
+										</ul>
+									</div>
+									<div>
+										<h4>Long Term</h4>
+										<ul>
+											<li>☁️ Cloud synchronization</li>
+											<li>👥 Multi-user collaboration</li>
+											<li>📱 Native mobile applications</li>
+											<li>🤖 AI-powered recommendations</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</section>
@@ -309,16 +460,46 @@
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
-							<h3>Digital Library App Presentation</h3>
-							<p>Academic Project | Web Development</p>
-							<p>Thank you for reviewing this project presentation.</p>
+							<h3>Digital Library Application</h3>
+							<p>A comprehensive web application for managing personal media collections</p>
+							<p><strong>Presented for Academic Review</strong></p>
+							
+							<div style="margin: 30px 0;">
+								<h4>App Features Showcased</h4>
+								<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0;">
+									<span style="background: #e8f4fc; padding: 8px 15px; border-radius: 20px;">Library View</span>
+									<span style="background: #e8f4fc; padding: 8px 15px; border-radius: 20px;">Search Functionality</span>
+									<span style="background: #e8f4fc; padding: 8px 15px; border-radius: 20px;">Category Filtering</span>
+									<span style="background: #e8f4fc; padding: 8px 15px; border-radius: 20px;">Add New Items</span>
+									<span style="background: #e8f4fc; padding: 8px 15px; border-radius: 20px;">Data Management</span>
+								</div>
+							</div>
+							
+							<div style="display: flex; justify-content: center; gap: 30px; margin: 30px 0; flex-wrap: wrap;">
+								<div style="text-align: center;">
+									<h4>4 Key Screens</h4>
+									<p>Complete interface coverage</p>
+								</div>
+								<div style="text-align: center;">
+									<h4>3 Media Types</h4>
+									<p>Books, Movies, Magazines</p>
+								</div>
+								<div style="text-align: center;">
+									<h4>Full CRUD</h4>
+									<p>Create, Read, Update, Delete</p>
+								</div>
+							</div>
+							
 							<ul class="icons">
-								<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-codepen"><span class="label">CodePen</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><span class="icon solid style2 major fa-graduation-cap"></span></li>
+								<li><span class="icon solid style2 major fa-laptop-code"></span></li>
+								<li><span class="icon solid style2 major fa-book"></span></li>
+								<li><span class="icon solid style2 major fa-film"></span></li>
+								<li><span class="icon solid style2 major fa-newspaper"></span></li>
 							</ul>
-							<p>&copy; Digital Library App. Template: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							
+							<p>&copy; Digital Library App Presentation. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							<p style="font-size: 0.9em; color: #777;">Thank you for reviewing this web development project.</p>
 						</div>
 					</footer>
 
@@ -333,31 +514,61 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				// Simple demo functionality
 				$(document).ready(function() {
-					// Highlight table rows on hover
+					// Enhance table interactivity
 					$('.demo-table tbody tr').hover(
 						function() {
-							$(this).css('transform', 'translateY(-2px)');
-							$(this).css('box-shadow', '0 2px 8px rgba(0,0,0,0.1)');
+							$(this).css('background-color', '#f8f9fa');
+							$(this).css('cursor', 'pointer');
+							$(this).css('transform', 'scale(1.01)');
 						},
 						function() {
-							$(this).css('transform', 'translateY(0)');
-							$(this).css('box-shadow', 'none');
+							if ($(this).index() % 2 === 0) {
+								$(this).css('background-color', '#f3f3f3');
+							} else {
+								$(this).css('background-color', 'white');
+							}
+							$(this).css('transform', 'scale(1)');
 						}
 					);
 					
-					// Smooth scrolling for navigation
+					// Smooth scrolling
 					$('a[href*="#"]').on('click', function(e) {
-						e.preventDefault();
-						
-						$('html, body').animate(
-							{
-								scrollTop: $($(this).attr('href')).offset().top,
-							},
-							500,
-							'linear'
-						);
+						if (this.hash !== "") {
+							e.preventDefault();
+							const hash = this.hash;
+							$('html, body').animate({
+								scrollTop: $(hash).offset().top - 80
+							}, 800);
+						}
+					});
+					
+					// Add click effect to feature cards
+					$('.feature-card').hover(
+						function() {
+							$(this).css('transform', 'translateY(-5px)');
+							$(this).css('box-shadow', '0 8px 25px rgba(0,0,0,0.15)');
+						},
+						function() {
+							$(this).css('transform', 'translateY(0)');
+							$(this).css('box-shadow', '0 4px 15px rgba(0,0,0,0.1)');
+						}
+					);
+					
+					// Image hover effect
+					$('.app-screenshot').hover(
+						function() {
+							$(this).css('border-color', '#3498db');
+						},
+						function() {
+							$(this).css('border-color', '#e0e0e0');
+						}
+					);
+					
+					// Table row click effect
+					$('.demo-table tbody tr').on('click', function() {
+						const itemName = $(this).find('td:first').text().trim();
+						alert('You selected: ' + itemName + '\n\nThis demonstrates interactive table functionality.');
 					});
 				});
 			</script>
