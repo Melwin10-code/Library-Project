@@ -6,11 +6,69 @@
 -->
 <html>
 	<head>
-		<title>Melwin sniffs ass </title>
+		<title>Digital Library System</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Custom styles for library system */
+			.library-demo {
+				background: #2c3e50;
+				padding: 20px;
+				border-radius: 10px;
+				margin: 20px 0;
+			}
+			
+			.status-badge {
+				display: inline-block;
+				padding: 5px 10px;
+				border-radius: 20px;
+				font-size: 0.8em;
+				font-weight: bold;
+				margin-left: 10px;
+			}
+			
+			.status-running {
+				background: #27ae60;
+				color: white;
+			}
+			
+			.status-stopped {
+				background: #e74c3c;
+				color: white;
+			}
+			
+			.feature-list {
+				list-style: none;
+				padding-left: 0;
+			}
+			
+			.feature-list li {
+				padding: 5px 0;
+				padding-left: 30px;
+				position: relative;
+			}
+			
+			.feature-list li:before {
+				content: "✓";
+				position: absolute;
+				left: 0;
+				color: #27ae60;
+				font-weight: bold;
+			}
+			
+			.code-snippet {
+				background: #1a1a1a;
+				color: #f8f8f2;
+				padding: 15px;
+				border-radius: 5px;
+				font-family: 'Courier New', monospace;
+				font-size: 0.9em;
+				overflow-x: auto;
+				margin: 15px 0;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -19,7 +77,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Solid State</a></h1>
+						<h1><a href="index.html">Digital Library System</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -31,10 +89,10 @@
 							<h2>Menu</h2>
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+								<li><a href="generic.html">System Architecture</a></li>
+								<li><a href="elements.html">API Documentation</a></li>
+								<li><a href="#demo">Live Demo</a></li>
+								<li><a href="#features">Features</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -43,84 +101,163 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><span class="icon fa-gem"></span></div>
-							<h2>This is Solid State</h2>
-							<p>Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+							<div class="logo"><span class="icon fa-book"></span></div>
+							<h2>Digital Library System</h2>
+							<p>A Full-Stack Python Application with Flask Backend & Tkinter GUI</p>
+							<p>Project by: <strong>[Your Name/Student ID]</strong></p>
+							<p>Course: <strong>[Course Name]</strong></p>
 						</div>
 					</section>
 
 				<!-- Wrapper -->
 					<section id="wrapper">
 
-						<!-- One -->
+						<!-- One - Project Overview -->
 							<section id="one" class="wrapper spotlight style1">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+									<a href="#" class="image"><img src="images/pic01.jpg" alt="System Architecture Diagram" /></a>
 									<div class="content">
-										<h2 class="major">Magna arcu feugiat</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
+										<h2 class="major">Project Overview</h2>
+										<p>The Digital Library System is a comprehensive full-stack application that manages media collections including books, films, and magazines. Built with Python, it features a Flask REST API backend and a Tkinter GUI frontend.</p>
+										<ul class="feature-list">
+											<li>RESTful API with Flask</li>
+											<li>Tkinter Desktop Interface</li>
+											<li>JSON-based Data Storage</li>
+											<li>CRUD Operations</li>
+											<li>Search & Filter Capabilities</li>
+										</ul>
+										<a href="generic.html" class="special">View Architecture</a>
 									</div>
 								</div>
 							</section>
 
-						<!-- Two -->
+						<!-- Two - Tech Stack -->
 							<section id="two" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+									<a href="#" class="image"><img src="images/pic02.jpg" alt="Technology Stack" /></a>
 									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
+										<h2 class="major">Technology Stack</h2>
+										<p>Modern technologies and best practices used in development:</p>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<h4>Backend</h4>
+												<ul>
+													<li><strong>Python 3.11</strong></li>
+													<li><strong>Flask</strong> - Web Framework</li>
+													<li><strong>JSON</strong> - Data Storage</li>
+													<li><strong>HTTP/REST</strong> - API Protocol</li>
+												</ul>
+											</div>
+											<div class="col-6 col-12-medium">
+												<h4>Frontend</h4>
+												<ul>
+													<li><strong>Tkinter</strong> - GUI Framework</li>
+													<li><strong>HTML5/CSS3</strong> - Documentation</li>
+													<li><strong>JavaScript</strong> - Interactive Elements</li>
+												</ul>
+											</div>
+										</div>
+										<a href="#features" class="special">See Features</a>
 									</div>
 								</div>
 							</section>
 
-						<!-- Three -->
+						<!-- Three - System Features -->
 							<section id="three" class="wrapper spotlight style3">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+									<a href="#" class="image"><img src="images/pic03.jpg" alt="System Features" /></a>
 									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
+										<h2 class="major">Key Features</h2>
+										<p>Comprehensive media management system with the following capabilities:</p>
+										<ul class="feature-list">
+											<li>📚 List all media items with pagination</li>
+											<li>🔍 Advanced search by title, author, category</li>
+											<li>📁 Filter by media type (Books, Films, Magazines)</li>
+											<li>➕ Add new media entries with validation</li>
+											<li>✏️ Edit existing media information</li>
+											<li>🗑️ Delete media items with confirmation</li>
+											<li>📊 View detailed information for each item</li>
+											<li>💾 Automatic JSON data persistence</li>
+										</ul>
+										<a href="#demo" class="special">Try Live Demo</a>
 									</div>
 								</div>
 							</section>
 
-						<!-- Four -->
+						<!-- Four - Live Demo Section -->
 							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Vitae phasellus</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-									<section class="features">
+								<div class="inner" id="demo">
+									<h2 class="major">Live System Demo</h2>
+									<p>Current server status: 
+										<span class="status-badge status-running">RUNNING</span>
+										<span style="font-family: monospace;">http://127.0.0.1:5080</span>
+									</p>
+									
+									<div class="library-demo">
+										<h3>API Endpoints</h3>
+										<div class="code-snippet">
+GET /media              # List all media items<br>
+GET /media/{id}         # Get specific media<br>
+POST /media             # Add new media<br>
+PUT /media/{id}         # Update media<br>
+DELETE /media/{id}      # Delete media<br>
+GET /media/category/{type} # Filter by category
+										</div>
+										
+										<h3>Sample Media Data Structure</h3>
+										<div class="code-snippet">
+{
+  "id": 1,
+  "title": "The Great Gatsby",
+  "type": "book",
+  "author": "F. Scott Fitzgerald",
+  "year": 1925,
+  "category": "Fiction",
+  "description": "A classic novel about the American Dream"
+}
+										</div>
+										
+										<h3>Quick Start Commands</h3>
+										<div class="code-snippet">
+# Start Flask Backend Server
+python main.py
+
+# Launch Tkinter GUI
+python gui.py
+
+# Test API Endpoint
+curl http://127.0.0.1:5080/media
+										</div>
+									</div>
+									
+									<section class="features" id="features">
 										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="Backend Architecture" /></a>
+											<h3 class="major">Backend Architecture</h3>
+											<p>Flask-based REST API with modular design, error handling, and JSON data management.</p>
+											<a href="generic.html#backend" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="Frontend Interface" /></a>
+											<h3 class="major">Frontend Interface</h3>
+											<p>Tkinter GUI with intuitive controls, real-time updates, and responsive design.</p>
+											<a href="generic.html#frontend" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#" class="image"><img src="images/pic06.jpg" alt="Data Management" /></a>
+											<h3 class="major">Data Management</h3>
+											<p>JSON-based storage with CRUD operations, validation, and data persistence.</p>
+											<a href="generic.html#data" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="API Documentation" /></a>
+											<h3 class="major">API Documentation</h3>
+											<p>Complete REST API documentation with examples and error codes.</p>
+											<a href="elements.html" class="special">Learn more</a>
 										</article>
 									</section>
 									<ul class="actions">
-										<li><a href="#" class="button">Browse All</a></li>
+										<li><a href="generic.html" class="button">View Complete Documentation</a></li>
 									</ul>
 								</div>
 							</section>
@@ -130,41 +267,73 @@
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
+							<h2 class="major">Project Information</h2>
+							<p><strong>Digital Library System</strong> - A comprehensive full-stack application demonstrating modern software development practices, REST API design, and desktop application development.</p>
+							
+							<h3>Project Structure</h3>
+							<div class="code-snippet" style="font-size: 0.8em;">
+Library Project/<br>
+├── main.py              # Flask backend server<br>
+├── gui.py               # Tkinter frontend application<br>
+├── media.json           # Data storage (books, films, magazines)<br>
+├── index.html           # Project documentation (this page)<br>
+├── generic.html         # System architecture details<br>
+├── elements.html        # API documentation<br>
+├── assets/              # CSS, JS, and images<br>
+└── README.txt           # Project overview
+							</div>
+							
+							<h3>Development Highlights</h3>
+							<ul class="feature-list">
+								<li>Modular and maintainable code structure</li>
+								<li>Comprehensive error handling</li>
+								<li>Data validation and sanitization</li>
+								<li>User-friendly interface design</li>
+								<li>Detailed documentation</li>
+								<li>Follows PEP 8 style guidelines</li>
+							</ul>
+							
+							<form method="post" action="#" id="contactForm">
 								<div class="fields">
 									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+										<label for="name">Student Name</label>
+										<input type="text" name="name" id="name" value="[Your Name]" readonly />
 									</div>
 									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
+										<label for="studentId">Student ID</label>
+										<input type="text" name="studentId" id="studentId" value="[Your Student ID]" readonly />
 									</div>
 									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
+										<label for="course">Course</label>
+										<input type="text" name="course" id="course" value="[Course Name]" readonly />
+									</div>
+									<div class="field">
+										<label for="professor">Professor</label>
+										<input type="text" name="professor" id="professor" value="[Professor's Name]" readonly />
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><a href="#" class="button" onclick="window.print()">Print Documentation</a></li>
 								</ul>
 							</form>
+							
 							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
+								<li class="icon solid fa-university">
+									<strong>[University Name]</strong><br />
+									[Department Name]<br />
+									[Course Code] - [Semester/Year]
 								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+								<li class="icon solid fa-user-graduate">Student: [Your Name]</li>
+								<li class="icon solid fa-id-card">ID: [Student ID]</li>
+								<li class="icon solid fa-envelope"><a href="mailto:[your.email@university.edu]">[your.email@university.edu]</a></li>
+								<li class="icon solid fa-calendar">Submission Date: [Date]</li>
+								<li class="icon solid fa-code">Built with: Python, Flask, Tkinter</li>
 							</ul>
+							
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; [Your Name]. Digital Library System Project.</li>
+								<li>Template Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Academic Project - [University Name]</li>
 							</ul>
 						</div>
 					</section>
@@ -178,6 +347,27 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<script>
+				// Update current date
+				document.addEventListener('DOMContentLoaded', function() {
+					const now = new Date();
+					const options = { year: 'numeric', month: 'long', day: 'numeric' };
+					const dateElements = document.querySelectorAll('.icon.fa-calendar');
+					if (dateElements.length > 0) {
+						dateElements[0].innerHTML = dateElements[0].innerHTML.replace('[Date]', 
+							now.toLocaleDateString('en-US', options));
+					}
+					
+					// Simulate server status
+					const statusBadge = document.querySelector('.status-badge');
+					setInterval(() => {
+						statusBadge.classList.toggle('status-running');
+						statusBadge.classList.toggle('status-stopped');
+						statusBadge.textContent = statusBadge.classList.contains('status-running') ? 'RUNNING' : 'STOPPED';
+					}, 5000);
+				});
+			</script>
 
 	</body>
 </html>
